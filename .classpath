@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Refer Library"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/com.springsource.net.sf.cglib-2.2.0.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/com.springsource.org.junit-4.7.0.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/mybatis-3.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/mysql-connector-java-5.1.25.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/spring-asm-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/spring-beans-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/spring-context-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/spring-core-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/spring-expression-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/spring-jdbc-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/spring-test-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/spring-tx-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
