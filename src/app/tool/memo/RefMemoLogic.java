@@ -4,11 +4,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+
 import db.SqliteConnect;
 
 @SuppressWarnings("serial")
 public class RefMemoLogic extends RefMemoView{
     
+	@Autowired
+	private ApplicationContext context;
+	
     private SqliteConnect sqlite = null;
     
     public RefMemoLogic() throws Exception{
@@ -17,6 +23,7 @@ public class RefMemoLogic extends RefMemoView{
         init();
 //        readyDB();
         addListner();
+        System.out.println(context);
 
     }
     
