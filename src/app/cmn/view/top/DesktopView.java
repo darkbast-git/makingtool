@@ -51,7 +51,7 @@ public class DesktopView extends _DesktopView{
 				RefMemoLogic refMemo = new RefMemoLogic();
 //				desktop.add(refMemo);
 				refMemo.setVisible(true);
-				refMemo.setSize(500, 100);
+				refMemo.setSize(750, 800);
 				addView("refMemo", refMemo);
 //				refMemo.setClosable(true);
 //				refMemo.setVisible(true);

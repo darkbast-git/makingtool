@@ -18,7 +18,6 @@ public class RefMemoLogic extends RefMemoView{
     private SqliteConnect sqlite = null;
     
     public RefMemoLogic() throws Exception{
-        setSize(680,495);
         setVisible(true);
         init();
 //        readyDB();
