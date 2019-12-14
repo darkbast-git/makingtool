@@ -21,14 +21,14 @@ public class RefMemoTabInsertView extends JPanel{
 		setLayout(null);
 		
 		JScrollPane insScrPane = new JScrollPane();
-		insScrPane.setBounds(81, 64, 625, 479);
+		insScrPane.setBounds(81, 64, 613, 434);
 		add(insScrPane);
 		
 		JTextArea taInsContent = new JTextArea();
 		insScrPane.setViewportView(taInsContent);
 		
 		tInsTitle = new JTextField();
-		tInsTitle.setBounds(81, 32, 625, 21);
+		tInsTitle.setBounds(81, 32, 613, 21);
 		add(tInsTitle);
 		tInsTitle.setColumns(10);
 		
@@ -45,9 +45,17 @@ public class RefMemoTabInsertView extends JPanel{
 		add(lblTag);
 		
 		tInsTag = new JTextField();
-		tInsTag.setBounds(81, 7, 625, 21);
+		tInsTag.setBounds(81, 7, 613, 21);
 		add(tInsTag);
 		tInsTag.setColumns(10);
+		
+		JButton btnNewButton = new JButton("등록하기");
+		btnNewButton.setBounds(597, 508, 97, 23);
+		add(btnNewButton);
+		
+		JLabel lblNewLabel = new JLabel("상태 : ");
+		lblNewLabel.setBounds(12, 512, 573, 15);
+		add(lblNewLabel);
         
 	}
 }

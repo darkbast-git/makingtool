@@ -19,5 +19,6 @@
 	<classpathentry kind="lib" path="E:/workspace_svn/java/spring/lib/spring-tx-3.0.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="E:/workspace_svn/java/dev/MakeTool/makingtool/lib/sqlite-jdbc-3.16.1.jar"/>
 	<classpathentry kind="lib" path="E:/workspace_svn/java/dev/MakeTool/makingtool/lib/commons-dbcp2-2.7.0.jar"/>
+	<classpathentry kind="lib" path="E:/workspace_svn/java/dev/MakeTool/makingtool/lib/commons-lang3-3.9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

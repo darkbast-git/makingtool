@@ -21,14 +21,14 @@ public class RefMemoTabUpdView extends JPanel{
 		setLayout(null);
 		
 		JScrollPane updScrPane = new JScrollPane();
-		updScrPane.setBounds(81, 64, 625, 479);
+		updScrPane.setBounds(81, 64, 614, 427);
 		add(updScrPane);
 		
 		JTextArea taUpdContent = new JTextArea();
 		updScrPane.setViewportView(taUpdContent);
 		
 		taUpdTitle = new JTextField();
-		taUpdTitle.setBounds(81, 32, 625, 21);
+		taUpdTitle.setBounds(81, 32, 614, 21);
 		add(taUpdTitle);
 		taUpdTitle.setColumns(10);
 		
@@ -45,9 +45,17 @@ public class RefMemoTabUpdView extends JPanel{
 		add(lblUpdTag);
 		
 		tUpdTag = new JTextField();
-		tUpdTag.setBounds(81, 7, 625, 21);
+		tUpdTag.setBounds(81, 7, 614, 21);
 		add(tUpdTag);
 		tUpdTag.setColumns(10);
+		
+		JButton btnNewButton = new JButton("갱신");
+		btnNewButton.setBounds(598, 511, 97, 23);
+		add(btnNewButton);
+		
+		JLabel lblUpdSts = new JLabel("상태 : ");
+		lblUpdSts.setBounds(12, 515, 574, 15);
+		add(lblUpdSts);
         
 	}
 }

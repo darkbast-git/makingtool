@@ -22,14 +22,15 @@ public class RefMemoLogic extends RefMemoView{
         init();
 //        readyDB();
         addListner();
-        System.out.println(context);
+       
 
     }
     
     
     public void init(){
-        btnUpdate.setEnabled(false);
-        btnInsert.setEnabled(false);
+//        btnUpdate.setEnabled(false);
+//        btnInsert.setEnabled(false);
+    	refMemoTabSearchView.taContent.setEditable(false);
     }
     
     public void readyDB() throws Exception{
@@ -47,13 +48,38 @@ public class RefMemoLogic extends RefMemoView{
 //        public JButton btnInsert;
 //        btnSearch.addActionListener(l);
 //        btnInsertMode.addActionListener(actBtnSearch);
-    	btnUpdate.addActionListener(actBtnUpdate);
+//    	btnUpdate.addActionListener(actBtnUpdate);
+    	refMemoTabSearchView.btnLock.addActionListener(actBtnLock);
+    	refMemoTabSearchView.btnSearchUpd.addActionListener(actBtnSearchUpd);
     }
     
-    public ActionListener actBtnUpdate = new ActionListener() {
+    public ActionListener actBtnLock = new ActionListener() {
 		
 		@Override
-		public void actionPerformed(ActionEvent e) {
+		public void actionPerformed(ActionEvent evt) {
+			boolean isEnable = refMemoTabSearchView.lstSearchResult.isEnabled();
+			
+			if (isEnable){
+				refMemoTabSearchView.lstSearchResult.setEnabled(false);
+			}else{
+				refMemoTabSearchView.lstSearchResult.setEnabled(true);				
+			}
+			
+		}
+	};
+    
+    public ActionListener actBtnSearchUpd = new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent evt) {
+			RefMemoTabUpdView updNewTab = new RefMemoTabUpdView();
+
+			newTabList.add(newTabCount);
+			tabbedPane.addTab("갱신" + newTabCount, updNewTab);
+			newTabCount++;
+			
+			tabbedPane.setSelectedIndex(tabbedPane.getTabCount()-1);
+
 			
 		}
 	};
@@ -90,16 +116,16 @@ public class RefMemoLogic extends RefMemoView{
             if (mode) {
                 // 사용해제하기
                 mode = false;
-                btnInsert.setEnabled(false);
+//                btnInsert.setEnabled(false);
                 // 
                 
             }
                 
             if (!mode)
                 mode = true;
-                btnInsert.setEnabled(true);
-                btnSearch.setEnabled(false);
-                btnUpdate.setEnabled(true);
+//                btnInsert.setEnabled(true);
+//                btnSearch.setEnabled(false);
+//                btnUpdate.setEnabled(true);
         }
     };
     

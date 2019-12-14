@@ -12,6 +12,7 @@ import javax.swing.JMenuItem;
 
 public abstract class _DesktopView extends JFrame{
 	public _DesktopView() {
+
 	}
 	private Map<String, Object> viewMap = new LinkedHashMap<String, Object>();
 	public JDesktopPane desktop = null;

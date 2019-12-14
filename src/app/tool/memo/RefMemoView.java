@@ -1,41 +1,43 @@
 package app.tool.memo;
 
-import javax.swing.JInternalFrame;
-import javax.swing.JPanel;
+import java.util.LinkedList;
+import java.util.List;
+
 import javax.swing.JButton;
-import javax.swing.JTextField;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JList;
-import javax.swing.JLabel;
 import javax.swing.JComboBox;
+import javax.swing.JInternalFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-import java.awt.FlowLayout;
+import javax.swing.JTextField;
 
 @SuppressWarnings("serial")
 public class RefMemoView extends JInternalFrame{
     public JButton btnSearch;
     public JTextField txSearch;
     public boolean mode = false;
-    public JButton btnInsert;
-    public JButton btnUpdate;
     public JLabel label;
+    public List<Integer> newTabList = new LinkedList<Integer>();
+    public Integer newTabCount = 1;
     public RefMemoTabSearchView refMemoTabSearchView;
+//    public RefMemoTabUpdView refMemoTabUpdView;
+    public RefMemoTabInsertView refMemoTabInsView;
+    public JTabbedPane tabbedPane;
 
     public RefMemoView() {
         getContentPane().setLayout(null);
 
         JPanel pSearch = new JPanel();
-        pSearch.setBounds(12, 10, 538, 79);
+        pSearch.setBounds(12, 10, 708, 79);
         getContentPane().add(pSearch);
         pSearch.setLayout(null);
 
         btnSearch = new JButton("검색");
-        btnSearch.setBounds(460, 10, 63, 59);
+        btnSearch.setBounds(633, 11, 63, 58);
         pSearch.add(btnSearch);
 
         txSearch = new JTextField();
-        txSearch.setBounds(87, 48, 363, 21);
+        txSearch.setBounds(85, 48, 536, 21);
         pSearch.add(txSearch);
         txSearch.setColumns(10);
         
@@ -44,32 +46,33 @@ public class RefMemoView extends JInternalFrame{
         pSearch.add(label);
         
         JComboBox comboBox = new JComboBox();
-        comboBox.setBounds(87, 11, 361, 21);
+        comboBox.setBounds(87, 11, 198, 21);
         pSearch.add(comboBox);
         
         JLabel lblNewLabel = new JLabel("검색명");
         lblNewLabel.setBounds(12, 51, 57, 15);
         pSearch.add(lblNewLabel);
         
-        JPanel panel = new JPanel();
-        panel.setBounds(579, 10, 130, 79);
-        getContentPane().add(panel);
-        panel.setLayout(null);
+        JLabel lblTag = new JLabel("태그");
+        lblTag.setBounds(297, 14, 57, 15);
+        pSearch.add(lblTag);
         
-        btnUpdate = new JButton("갱신");
-        btnUpdate.setBounds(12, 13, 106, 23);
-        panel.add(btnUpdate);
+        JComboBox comboBox_1 = new JComboBox();
+        comboBox_1.setBounds(336, 11, 285, 21);
+        pSearch.add(comboBox_1);
         
-        btnInsert = new JButton("등록");
-        btnInsert.setBounds(12, 46, 106, 23);
-        panel.add(btnInsert);
-        
-        JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+        tabbedPane = new JTabbedPane(JTabbedPane.TOP);
         tabbedPane.setBounds(12, 109, 708, 559);
         getContentPane().add(tabbedPane);
         
         refMemoTabSearchView = new RefMemoTabSearchView();
         tabbedPane.addTab("검색", null, refMemoTabSearchView, null);
-
+        
+        refMemoTabInsView = new RefMemoTabInsertView();
+        tabbedPane.addTab("등록", null, refMemoTabInsView, null);
+//        
+//        refMemoTabUpdView = new RefMemoTabUpdView();
+//        tabbedPane.addTab("갱신", null, refMemoTabUpdView, null);
+        
     }
 }
