@@ -1,16 +1,16 @@
 package app.tool.rest;
 
-import java.util.List;
-
 import app.cmn.ConstantsMap;
-import app.cmn.dto.ConstDto;
 
 public class RestLogic extends RestView{
-	
-    
 
     public RestLogic(){
+        init();
         initSetting();
+    }
+    
+    private void init(){
+        
     }
     
     private void initSetting(){

@@ -5,9 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.JButton;
-
-import org.apache.commons.lang3.StringUtils;
+import org.springframework.util.StringUtils;
 
 import app.cmn.ConstantsWord;
 import app.cmn.dto.ConstDto;
@@ -147,7 +145,7 @@ public class InsertParamLogic extends InsertParamView{
             // SQL IS NOT NEED.
             String sql = taSql.getText();
             // How many is ? count
-            int cntSql = StringUtils.countMatches(sql, "?");
+            int cntSql = StringUtils.countOccurrencesOf(sql, "?");
             
             // Parameter is not required.
             String param = taParam.getText();
